@@ -19,10 +19,8 @@
             <onup>300</onup>
             <ondown>300</ondown>
 
-            <!-- Default content -->
             <content target="videos">videodb://recentlyaddedmovies/</content>
 
-            <!-- NORMAL ITEMS -->
             <itemlayout width="300" height="500">
                 <control type="group">
                     <width>280</width>
@@ -48,7 +46,6 @@
                 </control>
             </itemlayout>
 
-            <!-- FOCUSED ITEM -->
             <focusedlayout width="330" height="520">
                 <control type="group">
                     <width>310</width>
@@ -67,6 +64,17 @@
                         <width>310</width>
                         <height>460</height>
                         <texture colordiffuse="main_fg_10">common/white.png</texture>
+                    </control>
+
+                    <control type="label">
+                        <top>440</top>
+                        <width>310</width>
+                        <height>30</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font_mini</font>
+                        <textcolor>main_fg_70</textcolor>
+                        <label>$INFO[ListItem.Year]$INFO[ListItem.Rating, • ,]</label>
                     </control>
 
                     <control type="label">
