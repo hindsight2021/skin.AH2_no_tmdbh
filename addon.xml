@@ -1,4 +1,4 @@
-<addon id="skin.arctic.horizon.2" name="Arctic Horizon 2" provider-name="jurialmunkey" version="0.8.30~nexus">
+<addon id="skin.ah2.lite" name="AH2 Lite" provider-name="hindsight2021" version="0.1.0~nexus">
     <requires>
         <import addon="xbmc.gui" version="5.16.0" />
         <import addon="script.skinshortcuts" version="0.4.0" />
@@ -12,8 +12,8 @@
         <res aspect="16:9" default="true" folder="1080i" height="1080" width="1920" />
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en">Minimal. Classic. Gradients. Widgets.</summary>
-        <description lang="en">Arctic Horizon 2</description>
+        <summary lang="en">Lightweight Arctic Horizon 2 fork using native Kodi widgets.</summary>
+        <description lang="en">AH2 Lite is a lightweight Arctic Horizon 2 fork designed to run as a separate Kodi skin without TMDbHelper. Widgets are intended to use native Kodi library paths wherever possible.</description>
         <platform>all</platform>
         <license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
         <forum />
