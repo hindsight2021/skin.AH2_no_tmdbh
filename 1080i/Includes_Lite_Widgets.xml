@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="Lite_Widget_Movies_Recent">
+        <content target="videos">videodb://recentlyaddedmovies/</content>
+    </include>
+
+    <include name="Lite_Widget_TV_Recent">
+        <content target="videos">videodb://recentlyaddedepisodes/</content>
+    </include>
+
+    <include name="Lite_Widget_Movies_All">
+        <content target="videos">videodb://movies/titles/</content>
+    </include>
+
+    <include name="Lite_Widget_TV_All">
+        <content target="videos">videodb://tvshows/titles/</content>
+    </include>
+
+    <include name="Lite_Widget_Container">
+        <control type="panel" id="301">
+            <visible>Integer.IsEqual(Window.Property(AH2Lite.WidgetContainer),301)</visible>
+            <scrolltime>200</scrolltime>
+            <itemlayout width="300" height="450">
+                <control type="image">
+                    <width>300</width>
+                    <height>450</height>
+                    <texture>$INFO[ListItem.Art(poster)]</texture>
+                </control>
+            </itemlayout>
+            <focusedlayout width="300" height="450">
+                <control type="image">
+                    <width>300</width>
+                    <height>450</height>
+                    <texture>$INFO[ListItem.Art(poster)]</texture>
+                </control>
+            </focusedlayout>
+        </control>
+    </include>
+
+</includes>

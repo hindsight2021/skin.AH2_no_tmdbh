@@ -25,10 +25,12 @@
     <include file="Includes_Animations.xml" />
     <include file="Includes_Weather.xml" />
     <include file="Includes_Home.xml" />
+    <include file="Includes_Lite_Home.xml" />
     <include file="Includes_Hubs.xml" />
     <include file="Includes_Lists.xml" />
     <include file="Includes_Layouts.xml" />
     <include file="Includes_Widgets.xml" />
+    <include file="Includes_Lite_Widgets.xml" />
     <include file="Includes_NextAired.xml" />
     <include file="Includes_Paths.xml" />
     <include file="Includes_Views.xml" />
