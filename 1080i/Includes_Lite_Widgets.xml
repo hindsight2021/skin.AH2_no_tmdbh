@@ -1,40 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-    <include name="Lite_Widget_Movies_Recent">
-        <content target="videos">videodb://recentlyaddedmovies/</content>
-    </include>
-
-    <include name="Lite_Widget_TV_Recent">
-        <content target="videos">videodb://recentlyaddedepisodes/</content>
-    </include>
-
-    <include name="Lite_Widget_Movies_All">
-        <content target="videos">videodb://movies/titles/</content>
-    </include>
-
-    <include name="Lite_Widget_TV_All">
-        <content target="videos">videodb://tvshows/titles/</content>
-    </include>
-
     <include name="Lite_Widget_Container">
         <control type="panel" id="301">
+            <left>80</left>
+            <top>260</top>
+            <right>80</right>
+            <height>560</height>
+
+            <orientation>horizontal</orientation>
+            <scrolltime>250</scrolltime>
+            <preloaditems>2</preloaditems>
+
             <visible>Integer.IsEqual(Window.Property(AH2Lite.WidgetContainer),301)</visible>
-            <scrolltime>200</scrolltime>
-            <itemlayout width="300" height="450">
-                <control type="image">
-                    <width>300</width>
-                    <height>450</height>
-                    <texture>$INFO[ListItem.Art(poster)]</texture>
+
+            <onleft>300</onleft>
+            <onright>301</onright>
+            <onup>300</onup>
+            <ondown>300</ondown>
+
+            <!-- Default content -->
+            <content target="videos">videodb://recentlyaddedmovies/</content>
+
+            <!-- NORMAL ITEMS -->
+            <itemlayout width="300" height="500">
+                <control type="group">
+                    <width>280</width>
+                    <height>460</height>
+
+                    <control type="image">
+                        <width>280</width>
+                        <height>420</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+                    </control>
+
+                    <control type="label">
+                        <top>430</top>
+                        <width>280</width>
+                        <height>40</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font_mini</font>
+                        <textcolor>main_fg_70</textcolor>
+                        <label>$INFO[ListItem.Title]</label>
+                    </control>
                 </control>
             </itemlayout>
-            <focusedlayout width="300" height="450">
-                <control type="image">
-                    <width>300</width>
-                    <height>450</height>
-                    <texture>$INFO[ListItem.Art(poster)]</texture>
+
+            <!-- FOCUSED ITEM -->
+            <focusedlayout width="330" height="520">
+                <control type="group">
+                    <width>310</width>
+                    <height>500</height>
+
+                    <animation effect="zoom" start="100" end="106" time="160" reversible="false">Focus</animation>
+
+                    <control type="image">
+                        <width>310</width>
+                        <height>460</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+                    </control>
+
+                    <control type="image">
+                        <width>310</width>
+                        <height>460</height>
+                        <texture colordiffuse="main_fg_10">common/white.png</texture>
+                    </control>
+
+                    <control type="label">
+                        <top>470</top>
+                        <width>310</width>
+                        <height>40</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>font_mini_bold</font>
+                        <textcolor>main_fg_100</textcolor>
+                        <label>$INFO[ListItem.Title]</label>
+                    </control>
                 </control>
             </focusedlayout>
+
         </control>
     </include>
 
